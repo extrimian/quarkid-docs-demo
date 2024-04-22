@@ -1,0 +1,259 @@
+{
+  "9b239c6d-b41a-47dc-9b61-b1c2c0779c2c": [
+    {
+      "type": "https://didcomm.org/out-of-band/2.0/invitation",
+      "id": "7ba2492b-41e2-4453-bf1e-fed35d67d870",
+      "from": "did:quarkid:zksync:issuer",
+      "body": { "goal_code": "streamlined-vc", "accept": ["didcomm/v2"] }
+    },
+    {
+      "type": "https://didcomm.org/issue-credential/3.0/propose-credential",
+      "id": "9b239c6d-b41a-47dc-9b61-b1c2c0779c2c",
+      "pthid": "7ba2492b-41e2-4453-bf1e-fed35d67d870",
+      "from": "did:quarkid:zksync:holder",
+      "to": [
+        "did:quarkid:zksync:issuer"
+      ]
+    },
+    {
+      "type": "https://didcomm.org/issue-credential/3.0/offer-credential",
+      "id": "0dac4233-14b8-400e-9599-bda993a19f23",
+      "thid": "9b239c6d-b41a-47dc-9b61-b1c2c0779c2c",
+      "from": "did:quarkid:zksync:issuer",
+      "to": [
+        "did:quarkid:zksync:holder"
+      ],
+      "body": {},
+      "attachments": [
+        {
+          "id": "152b0aa9-f8cb-46d4-b6aa-335ae2c39a81",
+          "media_type": "application/json",
+          "format": "dif/credential-manifest/manifest@v1.0",
+          "data": {
+            "json": {
+              "options": {
+                "challenge": "929f6392-4398-4339-8e57-0cc301f37fdf"
+              },
+              "credential_manifest": {
+                "id": "92bcb587-1cb3-4329-9831-8165bf8eb627",
+                "version": "0.1.0",
+                "issuer": {
+                  "id": "did:quarkid:zksync:issuer",
+                  "name": "Cadena",
+                  "styles": {
+                    "thumbnail": {
+                      "uri": "https://www.iadb.org/sites/default/files/logos/logos-BID-12-es.png",
+                      "alt": "Logo"
+                    },
+                    "hero": {
+                      "uri": "https://img.freepik.com/free-photo/white-textured-concrete_125540-1826.jpg?w=2000",
+                      "alt": "Background"
+                    },
+                    "background": { "color": "#0089A1" },
+                    "text": { "color": "#2B2B2D" }
+                  }
+                },
+                "output_descriptors": [
+                  {
+                    "id": "oea_certificate_output",
+                    "display": {
+                      "title": { "text": "Certificado OEA" },
+                      "subtitle": { "text": "Cadena" },
+                      "description": { "text": "Certificado OEA" },
+                      "properties": [
+                        {
+                          "path": ["$.credentialSubject.COMPANY_NAME"],
+                          "fallback": "Unknown",
+                          "label": "Nombre",
+                          "schema": { "type": "string" }
+                        }
+                      ]
+                    },
+                    "styles": {
+                      "thumbnail": {
+                        "uri": "https://i.ibb.co/ZMwg8cx/output-onlinepngtools-removebg-preview.png",
+                        "alt": "Logo"
+                      },
+                      "hero": {
+                        "uri": "https://us.123rf.com/450wm/berka/berka1409/berka140900317/31540293-fotograf%C3%ADa-de-papel-rayado-reciclaje-oscuro-blue-marine-de-grano-grueso-extra-muestra-de-la.jpg?ver=6",
+                        "alt": "Background"
+                      },
+                      "background": { "color": "#0089A1" },
+                      "text": { "color": "#FFFFFF" }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "id": "371d4840-5746-44a6-bce3-8daffcf0d83b",
+          "media_type": "application/json",
+          "format": "dif/credential-manifest/fulfillment@v1.0",
+          "data": {
+            "json": {
+              "@context": [
+                "https://extrimian.blob.core.windows.net/rskec/credentialsv1.jsonld",
+                "https://extrimian.blob.core.windows.net/rskec/credential-manifestfulfillmentv1.jsonld"
+              ],
+              "type": ["VerifiablePresentation", "CredentialFulfillment"],
+              "credential_fulfillment": {
+                "id": "bd3f5ae3-a66a-486c-87d9-04c5726abfef",
+                "manifest_id": "92bcb587-1cb3-4329-9831-8165bf8eb627",
+                "descriptor_map": [
+                  {
+                    "id": "oea_certificate_output",
+                    "format": "ldp_vc",
+                    "path": "$.verifiableCredential[0]"
+                  }
+                ]
+              },
+              "verifiableCredential": [
+                {
+                  "@context": [
+                    "https://extrimian.blob.core.windows.net/credentials/oea.json",
+                    "https://w3id.org/security/bbs/v1",
+                    "https://www.w3.org/2018/credentials/v1"
+                  ],
+                  "issuanceDate": "2024-04-11T15:23:03.773Z",
+                  "issuer": {
+                    "id": "did:quarkid:zksync:issuer",
+                    "name": "Cadena"
+                  },
+                  "expirationDate": "2025-09-19T03:00:00.000Z",
+                  "id": "a806e21e-125e-4bdb-a9fd-5e2ba2f05209",
+                  "credentialSubject": {
+                    "ISSUING_COUNTRY_ISO_CODE": "MX",
+                    "COMPANY_NAME": "Quark ID Demo",
+                    "COUNTRY_SPECIFIC_COMPANY_ID": "quarkid1234",
+                    "AEO_STATUS": "10",
+                    "AEO_CERTIFICATION_DATE": "2024-04-03T03:00:00",
+                    "VC_CREATED_DATE": "2024-04-11T15:05:44.488",
+                    "VC_LAST_MODIFIED_DATE": "2024-04-11T15:22:53.192",
+                    "AEO_OPERATOR_TYPE_CODE": "ZZZ",
+                    "AEO_ALTERNATE_ID": "MXquarkid1234-ZZZ",
+                    "AEO_ALTERNATE_ID_TYPE": "TIN",
+                    "COMPANY_ADDRESSES": [
+                      {
+                        "streetAddress": "",
+                        "country": "MX",
+                        "state": "",
+                        "city": "",
+                        "postalCode": ""
+                      }
+                    ]
+                  },
+                  "type": ["VerifiableCredential", "OeaCertificate"]
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "https://didcomm.org/issue-credential/3.0/request-credential",
+      "id": "155ee710-a81f-4863-8bb9-4133f724b35c",
+      "thid": "9b239c6d-b41a-47dc-9b61-b1c2c0779c2c",
+      "from": "did:quarkid:zksync:holder",
+      "to": [
+        "did:quarkid:zksync:issuer"
+      ],
+      "body": {},
+      "attachments": []
+    },
+    {
+      "type": "https://didcomm.org/issue-credential/3.0/issue-credential",
+      "id": "a07d13b3-57ae-4d24-92bd-61b88a1a775b",
+      "thid": "9b239c6d-b41a-47dc-9b61-b1c2c0779c2c",
+      "from": "did:quarkid:zksync:issuer",
+      "to": [
+        "did:quarkid:zksync:holder"
+      ],
+      "body": {},
+      "attachments": [
+        {
+          "id": "c19be184-e29b-4730-b175-27f6df79be0d",
+          "media_type": "application/json",
+          "format": "dif/credential-manifest/fulfillment@v1.0",
+          "data": {
+            "json": {
+              "@context": [
+                "https://extrimian.blob.core.windows.net/rskec/credentialsv1.jsonld",
+                "https://extrimian.blob.core.windows.net/rskec/credential-manifestfulfillmentv1.jsonld"
+              ],
+              "type": ["VerifiablePresentation", "CredentialFulfillment"],
+              "credential_fulfillment": {
+                "id": "bd3f5ae3-a66a-486c-87d9-04c5726abfef",
+                "manifest_id": "92bcb587-1cb3-4329-9831-8165bf8eb627",
+                "descriptor_map": [
+                  {
+                    "id": "oea_certificate_output",
+                    "format": "ldp_vc",
+                    "path": "$.verifiableCredential[0]"
+                  }
+                ]
+              },
+              "verifiableCredential": [
+                {
+                  "@context": [
+                    "https://extrimian.blob.core.windows.net/credentials/oea.json",
+                    "https://w3id.org/security/bbs/v1",
+                    "https://www.w3.org/2018/credentials/v1"
+                  ],
+                  "issuanceDate": "2024-04-11T15:23:03.773Z",
+                  "issuer": {
+                    "id": "did:quarkid:zksync:issuer",
+                    "name": "Cadena"
+                  },
+                  "expirationDate": "2025-09-19T03:00:00.000Z",
+                  "id": "a806e21e-125e-4bdb-a9fd-5e2ba2f05209",
+                  "credentialSubject": {
+                    "ISSUING_COUNTRY_ISO_CODE": "MX",
+                    "COMPANY_NAME": "Quark ID Demo",
+                    "COUNTRY_SPECIFIC_COMPANY_ID": "quarkid1234",
+                    "AEO_STATUS": "10",
+                    "AEO_CERTIFICATION_DATE": "2024-04-03T03:00:00",
+                    "VC_CREATED_DATE": "2024-04-11T15:05:44.488",
+                    "VC_LAST_MODIFIED_DATE": "2024-04-11T15:22:53.192",
+                    "AEO_OPERATOR_TYPE_CODE": "ZZZ",
+                    "AEO_ALTERNATE_ID": "MXquarkid1234-ZZZ",
+                    "AEO_ALTERNATE_ID_TYPE": "TIN",
+                    "COMPANY_ADDRESSES": [
+                      {
+                        "streetAddress": "",
+                        "country": "MX",
+                        "state": "",
+                        "city": "",
+                        "postalCode": ""
+                      }
+                    ]
+                  },
+                  "type": ["VerifiableCredential", "OeaCertificate"],
+                  "proof": {
+                    "type": "BbsBlsSignature2020",
+                    "created": "2024-04-11T15:23:14Z",
+                    "proofPurpose": "assertionMethod",
+                    "proofValue": "i0wM+pYxbFIchD/Kg6bTmWqz5WWFUt5Cgx4k24ljsvncb0jcejyESP93rS9CaR2UBr/rNrlqgwyezSSjD5jop+PlDi1FA/G+4E6UCmpVwU5yRd1gCiL3OLemh0OOKWoNdW5Z8G40DSStI6uA+Ykvlw==",
+                    "verificationMethod": "did:quarkid:zksync:issuer#vc-bbsbls"
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "https://didcomm.org/issue-credential/3.0/ack",
+      "id": "2c9145cb-51c2-47ea-9ce5-3303e8f9c85c",
+      "thid": "9b239c6d-b41a-47dc-9b61-b1c2c0779c2c",
+      "from": "did:quarkid:zksync:holder",
+      "to": [
+        "did:quarkid:zksync:issuer"
+      ],
+      "body": { "status": "OK" }
+    }
+  ]
+}

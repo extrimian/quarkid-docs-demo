@@ -1,0 +1,22 @@
+{
+  "name": "quarkid-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@extrimian/dwn-client": "^1.2.5",
+    "@extrimian/dwn-client-scheduler": "^1.1.0",
+    "@quarkid/did-core": "^1.0.0",
+    "@quarkid/did-registry": "^1.0.0",
+    "@quarkid/did-resolver": "^1.0.0",
+    "@quarkid/kms-client": "^1.0.0",
+    "@quarkid/kms-core": "^1.0.0",
+    "@quarkid/vc-core": "^1.0.0",
+    "@quarkid/vc-verifier": "^1.0.0"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "a806e21e-125e-4bdb-a9fd-5e2ba2f05209": {
+    "data": {
+      "@context": [
+        "https://extrimian.blob.core.windows.net/credentials/oea.json",
+        "https://w3id.org/security/bbs/v1",
+        "https://www.w3.org/2018/credentials/v1"
+      ],
+      "issuanceDate": "2024-04-11T15:23:03.773Z",
+      "issuer": {
+        "id": "did:quarkid:zksync:issuer",
+        "name": "Cadena"
+      },
+      "expirationDate": "2025-09-19T03:00:00.000Z",
+      "id": "a806e21e-125e-4bdb-a9fd-5e2ba2f05209",
+      "credentialSubject": {
+        "ISSUING_COUNTRY_ISO_CODE": "MX",
+        "COMPANY_NAME": "Quark ID Demo",
+        "COUNTRY_SPECIFIC_COMPANY_ID": "quarkid1234",
+        "AEO_STATUS": "10",
+        "AEO_CERTIFICATION_DATE": "2024-04-03T03:00:00",
+        "VC_CREATED_DATE": "2024-04-11T15:05:44.488",
+        "VC_LAST_MODIFIED_DATE": "2024-04-11T15:22:53.192",
+        "AEO_OPERATOR_TYPE_CODE": "ZZZ",
+        "AEO_ALTERNATE_ID": "MXquarkid1234-ZZZ",
+        "AEO_ALTERNATE_ID_TYPE": "TIN",
+        "COMPANY_ADDRESSES": [
+          {
+            "streetAddress": "",
+            "country": "MX",
+            "state": "",
+            "city": "",
+            "postalCode": ""
+          }
+        ]
+      },
+      "type": ["VerifiableCredential", "OeaCertificate"],
+      "proof": {
+        "type": "BbsBlsSignature2020",
+        "created": "2024-04-11T15:23:14Z",
+        "proofPurpose": "assertionMethod",
+        "proofValue": "i0wM+pYxbFIchD/Kg6bTmWqz5WWFUt5Cgx4k24ljsvncb0jcejyESP93rS9CaR2UBr/rNrlqgwyezSSjD5jop+PlDi1FA/G+4E6UCmpVwU5yRd1gCiL3OLemh0OOKWoNdW5Z8G40DSStI6uA+Ykvlw==",
+        "verificationMethod": "did:quarkid:zksync:issuer#vc-bbsbls"
+      }
+    },
+    "styles": {
+      "thumbnail": {
+        "uri": "https://i.ibb.co/ZMwg8cx/output-onlinepngtools-removebg-preview.png",
+        "alt": "Logo"
+      },
+      "hero": {
+        "uri": "https://us.123rf.com/450wm/berka/berka1409/berka140900317/31540293-fotograf%C3%ADa-de-papel-rayado-reciclaje-oscuro-blue-marine-de-grano-grueso-extra-muestra-de-la.jpg?ver=6",
+        "alt": "Background"
+      },
+      "background": { "color": "#0089A1" },
+      "text": { "color": "#FFFFFF" }
+    },
+    "display": {
+      "title": { "text": "Certificado OEA" },
+      "subtitle": { "text": "Cadena" },
+      "description": { "text": "Certificado OEA" },
+      "properties": [
+        {
+          "path": ["$.credentialSubject.COMPANY_NAME"],
+          "fallback": "Unknown",
+          "label": "Nombre",
+          "schema": { "type": "string" }
+        }
+      ]
+    }
+  }
+}
+
